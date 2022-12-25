@@ -1,0 +1,1 @@
+web: gunicorn 'tutoring_website.wsgi'

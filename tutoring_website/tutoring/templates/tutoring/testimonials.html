@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h2 class='m-4'>Parent Testimonials</h2>
+
+<div id="parentCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+    {% comment %} Only have 1 parent testimonial, therefore I don't need buttons yet {% endcomment %}
+    {% comment %} <div class="carousel-indicators">
+      <button type="button" data-bs-target="#parentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#parentCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#parentCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>  {% endcomment %}
+
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <img src="{% static 'tutoring/graduation_hat.webp' %}" alt="graduation_hat" class="rounded-circle shadow-1 mb-4 mb-lg-0"
+                    width="150" height="150" />
+                </div>
+                <div
+                  class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                  <h4 class="mb-4">Cheri & Bill Gotch - AP Physics & Calculus - June 2022</h4>
+                  <p class="mb-0 pb-3">
+                    Michell Daddario has been our son's tutor for the past 1.5 years to present. 
+                    He has tutored him in Pre-Calculus Honors, Physics, as well as AP Physics. 
+                    He plans to continue to use him this coming fall as a high school senior as he is taking Computer Science. 
+                    We feel so fortunate to have found Mitchell, as it wasn't easy to find someone who knew the subjects at this rigorous level. 
+                    We had tried other tutors beforehand and our son felt that he was actually instructing the tutor at times and was left frustrated that his questions were left unanswered. 
+                    Since using Mitchell, Aidan has excelled in his classes and now has a 4.2 GPA.  
+                    Mitchell was always willing to meet and was very accommodating to Aidan's busy schedule.  
+                    His sessions are also reasonably priced. Mitchell is highly professional, responsive, and we highly recommend him without any reservation.
+                  </p>
+                </div> 
+              </div>
+            </div>
+          </div>
+      </div>   
+    </div>
+
+
+    {% comment %} Only have 1 parent testimonial, therefore I don't need buttons yet {% endcomment %}
+
+    {% comment %} <button class="carousel-control-prev" type="button" data-bs-target="#parentCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#parentCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> {% endcomment %}
+  </div>
+
+<h2 class='m-4'>Student Testimonials</h2>
+
+<div id="studentCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+    {% comment %} These buttons need work, but, I can see them being a nice feature {% endcomment %}
+    {% comment %} <div class="carousel-indicators">
+      <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div> {% endcomment %}
+
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" data-bs-interval="10000">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center">
+                <img src="{% static 'tutoring/rocket.png' %}" alt="rocket" class="rounded-circle shadow-1 mb-4 mb-lg-0" 
+                  width="150" height="150" />
+                </div>
+                <div
+                  class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                  <h4 class="mb-4">Tanzima Hekmatyar - AP Physics - December 2021</h4>
+                  <p class="mb-0 pb-3">
+                    Never fails to help me comprehend the material in an understandable way. Recommend him to anyone!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="2000">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center">
+                  <img src="{% static 'tutoring/calculus.png' %}" alt="calculus" class="rounded-circle shadow-1 mb-4 mb-lg-0"
+                    width="150" height="150" />
+                </div>
+                <div
+                  class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                  <h4 class="mb-4">Shane Patel - AP Calculus - September 2021</h4>
+                  <p class="mb-0 pb-3">
+                    Great tutor and very understanding!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center">
+                <img src="{% static 'tutoring/rocket.png' %}" alt="rocket" class="rounded-circle shadow-1 mb-4 mb-lg-0"
+                  width="150" height="150" />
+                </div>
+                <div
+                  class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                  <h4 class="mb-4">Tomas Fernandes - AP Physics - October 2021</h4>
+                  <p class="mb-0 pb-3">
+                    Thank you for the session!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+{% endblock content %}

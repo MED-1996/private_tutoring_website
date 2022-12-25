@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% comment %} Copied HTML https://startbootstrap.com/snippets/pricing-table {% endcomment %}
+
+<link rel="stylesheet" href="{% static 'tutoring/pricing.css' %}">
+
+<section class="pricing py-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3">
+            {% comment %} Centers the Card {% endcomment %}
+          </div>
+        
+        <!-- Hourly Tutoring Sessions -->
+        <div class="col-lg-6">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Hourly Tutoring Sessions</h5>
+              <h6 class="card-price text-center">$60<span class="period">/hour</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Remote 1-1 Tutoring in Math, Physics & Computer Science</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Concept Review, Test Prep, Homework & Project Help</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Socratic Tutoring Method</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Interactive Online White Board <i>(Miro Board)</i></li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Access to White Board Session Notes</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Flexible Schedule <i>(Available on Weeks & Weekends)</i></li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Easy Payment <i>(Venmo, Paypal, Zelle)</i></li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>Free 24 Hr. Cancellation</li>
+                <li class="fst-italic"><span class="fa-li"><i class="fas fa-check"></i></span>**In-person Sessions Available if you live in Austin, TX**</li>
+              </ul>
+              <div class="d-grid">
+                <a href="{% url 'tutoring:client_form' %}#New-Student-Form" class="btn btn-primary text-uppercase">New Student Form</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+            {% comment %} Centers the Card {% endcomment %}
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

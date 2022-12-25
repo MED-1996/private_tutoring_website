@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% comment %} Copied HTML https://startbootstrap.com/snippets/pricing-table {% endcomment %}
+
+<link rel="stylesheet" href="{% static 'tutoring/pricing.css' %}">
+
+<section class="pricing py-5 text-white">
+    <div class="jumbotron piss">
+        <div class="container text-center">
+          <h1><i class="fa-solid fa-code"></i>&ensp;&ensp;<i class="fa-sharp fa-solid fa-subscript fa-sm"></i>&ensp;<i class="fa-solid fa-wave-square fa-xs"></i> Form Successfully Submitted <i class="fa-solid fa-wave-square fa-xs"></i>&ensp;<i class="fa-sharp fa-solid fa-subscript fa-sm"></i>&ensp;&ensp;<i class="fa-solid fa-code"></i></h1>
+          <h5>Thank You!</h5>
+          <hr>
+          <img src="{% static 'tutoring/brooklyn99.gif' %}" alt="Brooklyn 99 GIF">
+          <br>
+          <br>
+          <br>
+          <h6>As you can see, the girls are very excited and have let me know you have successfully submitted your form! Keep a lookout on your inbox and I will respond within 1 buisness day!</h6>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+              <div class="col text-center">
+                <a href="{% url 'tutoring:client_form' %}" class="btn btn-primary text-uppercase">Return to Home Page</a>
+              </div>
+            </div>
+          </div>
+    </div>
+  </section>
+
+{% endblock content %}

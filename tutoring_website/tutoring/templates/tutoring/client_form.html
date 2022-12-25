@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'tutoring/home.css' %}">
+
+<!-- Intro Section -->
+<section class="pricing py-5 text-white">
+  <div class="jumbotron piss">
+      <div class="container text-center">
+        <h1><i class="fa-solid fa-code"></i>&ensp;&ensp;<i class="fa-sharp fa-solid fa-subscript fa-sm"></i>&ensp;<i class="fa-solid fa-wave-square fa-xs"></i> Mitchell Daddario - Private Tutoring <i class="fa-solid fa-wave-square fa-xs"></i>&ensp;<i class="fa-sharp fa-solid fa-subscript fa-sm"></i>&ensp;&ensp;<i class="fa-solid fa-code"></i></h1>
+        <h5>High Quality Tutoring in Math, Physics & Computer Science</h5>
+        <hr>
+        <h6>Mitchell is a profesional tutor and software engineer. Over the past 2 years, Mitchell has helped 100+ students achieve academic success & subject understanding
+          in their courses. Through personalized sessions & commitment to student empowerment, students will be prepared for their futures.</h6>
+      </div>
+  </div>
+</section>
+
+<!-- Card Section -->
+<section class="pricing py-2">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Courses -->
+        <div class="col-lg-6">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">Courses</h5>
+              <h6 class="card-price text-center">High School & University - Math, Physics & Computer Science</h6>
+              <hr>
+              <ul class="fa-ul">
+                <h5 class="card-sub-title text-muted text-uppercase">Math</h5>
+                <li><span class="fa-li"><i class="fa-sharp fa-solid fa-plus"></i></i></span>Algebra, Geometry, Algebra 2, Trigonometry, Pre-Calculus</li>
+                <li><span class="fa-li"><i class="fa-sharp fa-solid fa-plus"></i></span>AP Calculus AB, AP Calculus BC</li>
+                <li><span class="fa-li"><i class="fa-sharp fa-solid fa-plus"></i></span>Multivariable Calculus, Linear Algebra</li>
+                <hr>
+                <h5 class="card-sub-title text-muted text-uppercase">Physics</h5>
+                <li><span class="fa-li"><i class="fa-solid fa-atom"></i></i></span>AP Physics C, AP Physics 1, AP Physics 2</li>
+                <li><span class="fa-li"><i class="fa-solid fa-atom"></i></span>University Intro Mechanical Engineering Courses</li>
+                <hr>
+                <h5 class="card-sub-title text-muted text-uppercase">Computer Science</h5>
+                <li><span class="fa-li"><i class="fa-solid fa-laptop-code"></i></span>AP Computer Science A</li>
+                <li><span class="fa-li"><i class="fa-solid fa-laptop-code"></i></span>University Intro Computer Science Courses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Online | In-Person -->
+        <div class="col-lg-6">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">Online | In-Person</h5>
+                <h6 class="card-price text-center">Online and In-Person tutoring - 7 days a week</h6>
+                <hr>
+                <ul class="fa-ul">
+                  <h5 class="card-sub-title text-muted text-uppercase">Online</h5>
+                  <li><span class="fa-li"><i class="fa-solid fa-chalkboard-user"></i></span>Google Meet for video call</li>
+                  <li><span class="fa-li"><i class="fa-solid fa-chalkboard-user"></i></span>Interactive Online White Board <i>(Miro Board)</i></li>
+                  <li><span class="fa-li"><i class="fa-solid fa-chalkboard-user"></i></span>Unlimited Access to White Board Session Notes</li>
+                  <hr>
+                  <h5 class="card-sub-title text-muted text-uppercase">In-Person</h5>
+                  <li><span class="fa-li"><i class="fa-solid fa-school-flag"></i></span>Available in Austin, TX</li>
+                  <li><span class="fa-li"><i class="fa-solid fa-school-flag"></i></span>Sessions at an Austin Public Library</li>
+                  <hr>
+                  <h5 class="card-sub-title text-muted text-uppercase">Availability</h5>
+                  <li><span class="fa-li"><i class="fa-solid fa-calendar-days"></i></span>Weekdays 5pm - 10pm (Central Time - CT)</li>
+                  <li><span class="fa-li"><i class="fa-solid fa-calendar-days"></i></span>Weekends 9am - 6pm (Central Time - CT)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+</section>
+
+<!-- Form Section -->
+<section class="pricing py-4 text-white">
+  <h2 class='text-center  mt-4' id='New-Student-Form'>New Student Form</h2>
+  <p class='text-center'><em>(If you are a New Student, please fill out this form and I will contact you via email within 1 buisness day!)</em></p>
+  
+  {% crispy form %}
+</section>
+
+{% endblock content %}
