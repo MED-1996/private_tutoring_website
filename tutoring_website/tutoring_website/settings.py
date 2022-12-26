@@ -31,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = ['https://mitchell-daddario-private-tutoring.com']
 
 # Application definition
 
