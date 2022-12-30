@@ -22,12 +22,15 @@ def client_form(request):
             course = cleaned_form_data.get('subject')
             comment = cleaned_form_data.get('comment')
 
-            # construct and send email.
+            # construct and send email to myself.
             subject = f'NEW TUTORING STUDENT - {name.upper()}'
             message = f'Student Name: {name}\nEmail: {email}\nGrade Level: {grade_level}\nSubject: {course}\nComment: {comment}'
-            email_from = EMAIL_HOST_USER
-            recipient_list = [EMAIL_HOST_USER]
-            send_mail(subject, message, email_from, recipient_list)
+            send_mail(subject, message, EMAIL_HOST_USER, [EMAIL_HOST_USER])
+
+            # construct and send email to the client
+            client_subject = 'Form Submitted - Mitchell Daddario Private Tutoring'
+            client_message = 'Thank you,\n\nThis is confirmation that your form has been received. Mitchell will reply to this email address within 1 business day with more information!\n\nSincerely,\nMitchell Daddario'
+            send_mail(client_subject, client_message, EMAIL_HOST_USER, [email])
 
             return redirect(reverse('tutoring:client_created'))
     else:
